@@ -1,11 +1,17 @@
 package com.curstwo.list.services;
 
 import com.curstwo.list.Employee;
-import com.curstwo.list.exceptions.BadRequestException;
-import com.curstwo.list.exceptions.NotFoundException;
-import org.springframework.stereotype.Service;
 
-@Service
-public class EmployeeService {
+import java.util.List;
+
+public interface EmployeeService {
+
+    public List<Employee> print();
+
+    public Object addEmployee(String firstName, String lastName);
+
+    public Object deleteEmployee(String firstName, String lastName);
+
+    public Object findEmployee(String firstName, String lastName);
 
 }
